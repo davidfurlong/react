@@ -678,7 +678,7 @@ var ReactMount = {
         var difference = ' (client) ' +
           normalizedMarkup.substring(diffIndex - 20, diffIndex + 20) +
           '\n (server) ' + rootMarkup.substring(diffIndex - 20, diffIndex + 20);
-
+        difference = normalizedMarkup + '\n (server) '+ rootMarkup;
         invariant(
           container.nodeType !== DOC_NODE_TYPE,
           'You\'re trying to render a component to the document using ' +
